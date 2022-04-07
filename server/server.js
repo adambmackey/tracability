@@ -14,6 +14,9 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 
+app.get('/say-hi', (req, res) => {
+    res.send("well hello back")
+})
 
 app.use(express.static('public'))
 
