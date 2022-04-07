@@ -16,6 +16,11 @@ rollbar.log("Hello world!");
 
 app.get('/say-hi', (req, res) => {
     res.send("well hello back")
+    try{
+        notAFunction(res)
+    }catch(error){
+        console.error(error)
+    }
 })
 
 app.use(express.static('public'))
