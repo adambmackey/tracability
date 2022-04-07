@@ -19,7 +19,7 @@ app.get('/say-hi', (req, res) => {
     try{
         notAFunction(res)
     }catch(error){
-        console.error(error)
+        rollbar.log(error)
     }
 })
 
